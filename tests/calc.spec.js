@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const calc = require('../src/main');
+const calc = require('../src/calc');
 
 describe('Calc', () => {
   describe('Smoke tests', () => {

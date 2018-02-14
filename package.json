@@ -6,13 +6,15 @@
   "scripts": {
     "lint": "eslint *.js .",
     "lint:fix": "eslint --fix *.js .",
-    "test": "mocha tests/**/*.spec.js",
-    "test:watch": "mocha tests/**/*.spec.js --watch",
+    "test": "mocha tests/**/*.spec.js --require babel-register",
+    "test:watch": "mocha tests/**/*.spec.js --require babel-register --watch",
     "prepush": "npm run lint"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "chai": "^4.1.2",
     "eslint": "^4.17.0",
     "eslint-config-airbnb-base": "^12.1.0",
