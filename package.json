@@ -6,7 +6,8 @@
   "scripts": {
     "lint": "eslint *.js .",
     "lint:fix": "eslint --fix *.js .",
-    "test": "mocha tests",
+    "test": "mocha tests/**/*.spec.js",
+    "test:watch": "mocha tests/**/*.spec.js --watch",
     "prepush": "npm run lint"
   },
   "author": "",
