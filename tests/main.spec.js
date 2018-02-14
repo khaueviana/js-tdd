@@ -1,36 +1,33 @@
 describe('Main', () => {
-  describe('Method A', () => {
-    context('Case 1', () => {
-      // it.skip('should happen blabla', () => {
-      it('should happen blabla', () => {
-        // espera que aconteça
-        // Entrada de dados / método sum(2,2)
-        // Espera retornar true ou falso
-        throw new Error('just an error');
-      });
-    });
-
-    // context.only('Case 2', () => {
-    context('Case 2', () => {
-      it('should happen blabla', () => {
-        // espera que aconteça
-        // Entrada de dados / método sum(2,2)
-        // Espera retornar true ou falso
-      });
-
-      it('should happen mimi', () => {
-        // espera que aconteça
-        // Entrada de dados / método sum(2,2)
-        // Espera retornar true ou falso
-      });
-    });
+  let arr;
+  // roda uma vez, antes do bloco
+  before(() => {
   });
 
-  describe('Method B', () => {
-    it('should happen blabla', () => {
-      // espera que aconteça
-      // Entrada de dados / método sum(2,2)
-      // Espera retornar true ou falso
-    });
+  // roda uma vez, depois do bloco
+  after(() => {
+  });
+
+  // roda todas as vezes, antes de cada bloco (IT)
+  beforeEach(() => {
+    arr = [1, 2, 3];
+  });
+
+  // roda todas as vezes, depois de cada bloco
+  afterEach(() => {
+  });
+
+  it('should have a size of 4 when push another value to the array', () => {
+    arr.push(4);
+    console.log(arr.length); // 4
+  });
+
+  it('should remove the value 3 when use pop in the array', () => {
+    console.log(arr.pop() === 3);
+  });
+
+  it('should have a size of 2 when pop a value form the array', () => {
+    arr.pop();
+    console.log(arr.legth);
   });
 });
